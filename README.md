@@ -1,7 +1,3 @@
-Aqui está o README atualizado com o nome de usuário:
-
----
-
 # Projeto NLW Journey - Rocketseat
 
 Projeto desenvolvido durante a NLW Journey da [Rocketseat](https://www.rocketseat.com.br) em Java utilizando Spring Boot e MySQL.
