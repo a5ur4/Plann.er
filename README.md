@@ -1,6 +1,6 @@
 # Projeto NLW Journey - Rocketseat
 
-Projeto desenvolvido durante a NLW Journey da [Rocketseat](https://www.rocketseat.com.br) em Java utilizando Spring Boot e MySQL.
+Projeto desenvolvido durante a NLW Journey da [Rocketseat](https://www.rocketseat.com.br) em Java utilizando Spring Boot e SQL.
 
 ## Descrição do Projeto
 
@@ -48,7 +48,7 @@ Este projeto consiste em uma aplicação para gerenciamento de viagens. Os usuá
 
 - Java
 - Spring Boot
-- MySQL
+- SQL
 
 ## Como Executar o Projeto
 
@@ -56,7 +56,7 @@ Este projeto consiste em uma aplicação para gerenciamento de viagens. Os usuá
 
 - [JDK 11+](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - [Maven](https://maven.apache.org/)
-- [MySQL](https://www.mysql.com/)
+- [SQL]([https://www.mysql.com/](https://pt.wikipedia.org/wiki/SQL))
 
 ### Passos para Execução
 
@@ -68,16 +68,12 @@ Este projeto consiste em uma aplicação para gerenciamento de viagens. Os usuá
     ```bash
     cd seu-repositorio
     ```
-3. Configure o banco de dados MySQL:
-    - Crie um banco de dados com o nome `nlw_journey`.
-    - Configure o arquivo `application.properties` com suas credenciais do MySQL.
-
-4. Compile e execute a aplicação:
+3. Compile e execute a aplicação:
     ```bash
     mvn spring-boot:run
     ```
 
-5. Acesse a aplicação em:
+4. Acesse a aplicação em:
     ```
     http://localhost:8080
     ```
