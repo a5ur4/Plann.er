@@ -44,6 +44,13 @@ public class Activity {
     public Activity(String title, String occursAt, Trip trip) {
         this.title = title;
         this.occursAt = LocalDateTime.parse(occursAt, DateTimeFormatter.ISO_DATE_TIME);
+
+        if (LocalDateTime.parse(occursAt, DateTimeFormatter.ISO_DATE_TIME).isBefore(trip.getStarstAt())){
+            throw new IllegalArgumentException("A atividade não pode começar antes da viagem.");
+        } else if (LocalDateTime.parse(occursAt, DateTimeFormatter.ISO_DATE_TIME).isAfter(trip.getEndsAt())){
+            throw new IllegalArgumentException("A atividade não pode acontecer depois da viagem.");
+        }
+
         this.trip = trip; 
     }
 }

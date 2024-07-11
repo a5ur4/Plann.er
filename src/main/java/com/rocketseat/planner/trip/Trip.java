@@ -50,7 +50,17 @@ public class Trip {
         this.isConfirmed = false;
         this.ownerEmail = data.owner_email();
         this.ownerName = data.owner_name();
-        this.starstAt = LocalDateTime.parse(data.starts_at(), DateTimeFormatter.ISO_DATE_TIME);
+        LocalDateTime startsAt = LocalDateTime.parse(data.starts_at(), DateTimeFormatter.ISO_DATE_TIME);
+        LocalDateTime endsAt = LocalDateTime.parse(data.ends_at(), DateTimeFormatter.ISO_DATE_TIME);
+        
+        if (startsAt.isEqual(endsAt)) {
+            throw new IllegalArgumentException("A viagem não pode começar e terminar no mesmo dia e horário.");
+        } else if (endsAt .isBefore(startsAt)) {
+            throw new IllegalArgumentException("A viagem não pode terminar antes de começar.");
+        }
+        
+        this.starstAt = startsAt;
+        this.endsAt = endsAt;
         this.endsAt = LocalDateTime.parse(data.ends_at(), DateTimeFormatter.ISO_DATE_TIME);
     }
 }
